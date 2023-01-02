@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import LiveTimestamp from "../LiveTimestamp";
 
 type Props = {
@@ -7,14 +6,7 @@ type Props = {
 };
 
 function ArticlePage({ searchParams }: Props) {
-  if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
-  ) {
-    return notFound();
-  }
-
-  const article: Article = searchParams;
+  const article: Article = searchParams!;
 
   return (
     <article>

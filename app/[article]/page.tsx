@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import LiveTimestamp from "../LiveTimestamp";
 
@@ -42,6 +43,9 @@ function ArticlePage({ searchParams }: Props) {
           <p className="pt-4">{article.description}</p>
         </div>
       </section>
+      <Link href={article.url ?? ''} className="mb-12 flex justify-center" target="_blank">
+        <button className=" bg-zinc-900 px-5 py-3 rounded-full text-white dark:bg-slate-200 dark:text-zinc-900 transition duration-500 transform hover:translate-y-1 text-center font-serif ">Read in Detail...</button>
+      </Link>
     </article>
   );
 }

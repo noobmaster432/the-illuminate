@@ -16,7 +16,8 @@ async function SearchPage({ searchParams }: Props) {
     <div>
         <h1 className="headerTitle">Search Results for: {searchParams?.term}</h1>      
         <NewsList news={news} />
-    </div>);
+    </div>
+  );
 }
 
 export default SearchPage;
